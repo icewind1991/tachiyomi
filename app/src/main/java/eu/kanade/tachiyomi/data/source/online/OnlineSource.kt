@@ -381,7 +381,7 @@ abstract class OnlineSource(context: Context) : Source {
      *
      * @param page the page whose source image has to be downloaded.
      */
-    fun imageResponse(page: Page): Observable<Response> = client
+    open fun imageResponse(page: Page): Observable<Response> = client
             .newCallWithProgress(imageRequest(page), page)
             .asObservable()
             .doOnNext {

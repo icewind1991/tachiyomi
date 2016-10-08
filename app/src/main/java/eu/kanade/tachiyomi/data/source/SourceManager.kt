@@ -28,8 +28,9 @@ open class SourceManager(private val context: Context) {
     val READMANGATODAY = 8
     val MANGASEE = 9
     val WIEMANGA = 10
+    val CRUNCHYROLL = 11
 
-    val LAST_SOURCE = 10
+    val LAST_SOURCE = 11
 
     val sourcesMap = createSources()
 
@@ -50,6 +51,7 @@ open class SourceManager(private val context: Context) {
         READMANGATODAY -> Readmangatoday(context, id)
         MANGASEE -> Mangasee(context, id)
         WIEMANGA -> WieManga(context, id)
+        CRUNCHYROLL -> Crunchyroll(context, id)
         else -> null
     }
 
